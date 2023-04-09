@@ -1,0 +1,32 @@
+<div class="play-list-body">
+    <ul class="play-list-table-header">
+        <li (click)="changeSort('nameBook')">Nombre ❤</li>
+        <li (click)="changeSort('saga')">Saga 🆗</li>
+        <li> Autor</li>
+        
+    </ul>
+    <ul class="play-list-rows" *ngFor="let book of books |orderList:optionSort.property:optionSort.order">
+        <li class="book-name">
+            <ng-container *ngTemplateOutlet="coverSection;context:{book:book}"></ng-container>
+        </li>
+        <li class="book-name-opacity">
+            {{book.saga}}
+        </li>
+        <li class="book-name-opacity">
+            {{book.autor?.name}}
+        </li>
+    </ul>
+</div>
+
+<!--template del cover-->
+<ng-template #coverSection let-book="book">
+
+    <div class="cover-section">
+        <img appImgBroken class="cover-book" [src]="book.portrait" [alt]="book.nameBook">
+        <div class="cover-info">
+            <div class="name-book">{{book.nameBook}}</div>
+            <div class="name-book-details">{{book.autor.name}}</div>
+        </div>
+    </div>
+
+</ng-template>
