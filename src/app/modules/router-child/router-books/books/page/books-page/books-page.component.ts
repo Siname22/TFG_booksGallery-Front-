@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { BooksModel } from '@core/models/books.model';
-import * as dataRaw from '../../../../data/books.json'
+import * as dataRaw from '../../../../../../data/books.json'
 
 
 @Component({
@@ -9,7 +9,7 @@ import * as dataRaw from '../../../../data/books.json'
   styleUrls: ['./books-page.component.css']
 })
 export class BooksPageComponent implements OnInit, OnDestroy {
-  mockTracksList:Array<BooksModel> = [
+  dataBooks:Array<BooksModel> = [
     
   ]
 
@@ -17,7 +17,7 @@ export class BooksPageComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     const { data } :any = (dataRaw as any).default
-    this.mockTracksList = data;
+    this.dataBooks = data;
   }
 
   ngOnDestroy(): void {

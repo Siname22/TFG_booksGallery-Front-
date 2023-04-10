@@ -7,6 +7,7 @@ import { ResultBooksComponent } from './components/result-books/result-books.com
 import { OrderListPipe } from './pipe/order-list.pipe';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { DetailBookComponent } from './components/detail-book/detail-book.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { FormsModule } from '@angular/forms';
     CardBooksComponent,
     ResultBooksComponent,
     OrderListPipe,
+    DetailBookComponent,
     ],
   imports: [
     CommonModule,
@@ -26,6 +28,7 @@ import { FormsModule } from '@angular/forms';
     CardBooksComponent,
     ResultBooksComponent,
     OrderListPipe,
+    DetailBookComponent,
   ]
 })
 export class SharedModule { }

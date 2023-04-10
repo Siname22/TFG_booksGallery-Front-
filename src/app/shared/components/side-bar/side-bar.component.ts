@@ -30,7 +30,8 @@ export class SideBarComponent implements OnInit {
       },
       {
         name: 'Añadir Libro',
-        icon: 'uil uil-book-medical'
+        icon: 'uil uil-book-medical',
+        router:['/', 'addBook']
       },
       {
         name: 'Cerrar Sesion',
@@ -43,12 +44,13 @@ export class SideBarComponent implements OnInit {
     this.mainMenu.accessLink = [
       {
         name: 'Crear lista',
-        icon: 'uil-plus-square'
+        icon: 'uil-plus-square',
+        router:['/','addListBook']
       },
       {
         name: 'Favoritos',
         icon: 'uil-heart',
-        router: ['/favorites'],
+        router: ['/','favorites'],
       },
       {
         name: 'Mi lista º1',

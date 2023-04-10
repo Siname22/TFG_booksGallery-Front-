@@ -3,7 +3,7 @@
 
     <div class="section--generic__player--zone">
         <ul class="player--list">
-            <li *ngFor="let books of dataBooks">
+            <li [routerLink]="['/books/detail', books._id]" *ngFor="let books of dataBooks">
                 <!--Para de buggear un objeto: {track | json} -->
                 <app-card-books [books]='books'></app-card-books> 
             </li>
