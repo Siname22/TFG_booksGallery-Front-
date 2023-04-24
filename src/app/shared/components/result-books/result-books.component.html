@@ -1,7 +1,7 @@
 <div class="play-list-body">
     <ul class="play-list-table-header">
-        <li (click)="changeSort('nameBook')">Nombre ❤</li>
-        <li (click)="changeSort('saga')">Saga 🆗</li>
+        <li (click)="changeSort('nombre')">Nombre</li>
+        <li (click)="changeSort('saga')">Saga </li>
         <li> Autor</li>
         
     </ul>
@@ -13,7 +13,7 @@
             {{book.saga}}
         </li>
         <li class="book-name-opacity">
-            {{book.autor?.name}}
+            {{book.autor?.nombre}}
         </li>
     </ul>
 </div>
@@ -22,10 +22,10 @@
 <ng-template #coverSection let-book="book">
 
     <div class="cover-section">
-        <img appImgBroken class="cover-book" [src]="book.portrait" [alt]="book.nameBook">
+        <img appImgBroken class="cover-book" [src]="book.portada" [alt]="book.nombre">
         <div class="cover-info">
-            <div class="name-book">{{book.nameBook}}</div>
-            <div class="name-book-details">{{book.autor.name}}</div>
+            <div class="name-book">{{book.nombre}}</div>
+            <div class="name-book-details">{{book.autor.nombre}}</div>
         </div>
     </div>
 

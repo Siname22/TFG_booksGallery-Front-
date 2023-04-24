@@ -1,14 +1,14 @@
 <div class="detail--book" *ngFor="let book of bookShow">
     <div class="header">
         <div class="cover">
-        <img [src]="book.portrait" alt="" >
+        <img [src]="book.portada" alt="" >
     </div>
     <div content-header>
-        <h1 class="title">{{book.nameBook}}</h1>
+        <h1 class="title">{{book.nombre}}</h1>
         <h3 class="sub-title">{{book.saga}}</h3>
         <div class="autor">
             <div class="name-autor">
-                {{book.autor?.name}}
+                {{book.autor?.nombre}}
             </div>
         </div> 
     </div>

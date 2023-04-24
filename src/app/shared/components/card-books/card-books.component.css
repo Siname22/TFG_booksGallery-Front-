@@ -28,7 +28,15 @@
     padding: 0 0 0 .75rem;
 }
 
-.card-player .buttons-player {
+
+
+/* ------------------------------------------------------------------------ */
+.card-player.player-big .info-button-player {
+    position: absolute;
+    right: 0;
+    top: 6%;
+}
+.card-player .info-button-player {
     opacity: 0;
     width: 5rem;
     display: flex;
@@ -38,11 +46,11 @@
     transition: all ease var(--animation-1);
 }
 
-.card-player:hover .buttons-player {
+.card-player:hover .info-button-player {
     opacity: 1;
 }
 
-.card-player .buttons-player .play-btn {
+.card-player .info-button-player .info-btn {
     color: var(--color-4);
     border: 0;
     font-size: 1.50rem;
@@ -50,8 +58,71 @@
     background-color: var(--color-1);
     width: 35px;
     height: 35px;
+    margin-left: 1px;
+}
+/* ------------------------------------------------------------------------ */
+.card-player.player-big .edit-button-player {
+    position: absolute;
+    right: 0;
+    top: 17%;
+}
+.card-player .edit-button-player {
+    opacity: 0;
+    width: 5rem;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    transition: all ease var(--animation-1);
 }
 
+.card-player:hover .edit-button-player {
+    opacity: 1;
+}
+
+.card-player .edit-button-player .edit-btn {
+    color: var(--color-4);
+    border: 0;
+    font-size: 1.50rem;
+    border-radius: 2rem;
+    background-color: blue;
+    width: 35px;
+    height: 35px;
+    margin-left: 1px;
+}
+
+/* ------------------------------------------------------------------------ */
+.card-player.player-big .delete-button-player {
+    position: absolute;
+    right: 0;
+    top: 28%;
+}
+.card-player .delete-button-player {
+    opacity: 0;
+    width: 5rem;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    transition: all ease var(--animation-1);
+}
+
+.card-player:hover .delete-button-player {
+    opacity: 1;
+}
+
+.card-player .delete-button-player .delete-btn {
+    color: var(--color-4);
+    border: 0;
+    font-size: 1.50rem;
+    border-radius: 2rem;
+    background-color:red;
+    width: 35px;
+    height: 35px;
+    margin-left: 1px;
+    margin-top: 1%;
+}
+/* ------------------------------------------------------------------------ */
 .card-player.player-big {
     position: relative;
     flex-direction: column;
@@ -78,8 +149,3 @@
     opacity: .7;
 }
 
-.card-player.player-big .buttons-player {
-    position: absolute;
-    right: 0;
-    top: 6%;
-}

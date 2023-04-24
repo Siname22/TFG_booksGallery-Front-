@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { BooksModel } from '@core/models/books.model';
-import * as dataRaw from '../../../data/books.json'
 
 
 @Component({
@@ -17,7 +16,5 @@ export class SectionGenericComponent implements OnInit{
   }
 
   ngOnInit(): void {
-    const { data } :any = (dataRaw as any).default
-    this.dataBooks = data;
   }
 }

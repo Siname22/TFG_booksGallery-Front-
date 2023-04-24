@@ -1,13 +1,25 @@
 <div class="card-player player-big">
-    <img [src]="books.portrait" alt="" class="cover">
+    <img [src]="books.portada" alt="" class="cover">
 
     <div class="content-player">
-        <div class="title-books">{{books.nameBook}}</div>
+        <div class="title-books">{{books.nombre}}</div>
         <div class="sub-title-books">{{books.saga}}</div>    
     </div>
-    <div class="buttons-player">
-        <button *ngIf="true" class="play-btn">
+    <div class="info-button-player">
+        <button *ngIf="true" class="info-btn">
             <i class="uil" [ngClass]="{'uil-info-circle':true}"></i>
         </button>
     </div>
-</div>     
+    <div class="edit-button-player">
+        <button *ngIf="true" class="edit-btn">
+            <i class="uil" [ngClass]="{'uil-pen': true}"></i>
+        </button>
+    </div>
+
+    <div class="delete-button-player">
+        <button *ngIf="true" class="delete-btn">
+            <i class="uil" [ngClass]="{'uil-trash-alt': true}"></i>
+        </button>
+    </div>
+        
+</div>

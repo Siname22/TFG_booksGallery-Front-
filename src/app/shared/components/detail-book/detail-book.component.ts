@@ -23,7 +23,7 @@ export class DetailBookComponent implements OnInit{
     const { data }:any = (dataRaw as any).default
     this.dataBooksModel = data  
     for (let i = 0; i < this.dataBooksModel.length; i++) {
-      if (this.dataBooksModel[i]._id == this.bookId) { 
+      if (this.dataBooksModel[i].id == this.bookId) { 
         this.bookShow.push(this.dataBooksModel[i])
         console.log('Se ha encontrado el libro', this.dataBooksModel[i])
       }

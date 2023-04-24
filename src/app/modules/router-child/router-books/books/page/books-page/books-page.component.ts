@@ -1,6 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { BooksModel } from '@core/models/books.model';
-import * as dataRaw from '../../../../../../data/books.json'
+import { BookService } from '@modules/router-child/router-books/books/services/books.service';
+import { Subscription } from 'rxjs';
 
 
 @Component({
@@ -9,15 +10,17 @@ import * as dataRaw from '../../../../../../data/books.json'
   styleUrls: ['./books-page.component.css']
 })
 export class BooksPageComponent implements OnInit, OnDestroy {
-  dataBooks:Array<BooksModel> = [
-    
-  ]
+  dataBooks:Array<BooksModel> = []
+  listObervers$ : Array<Subscription> = []
 
-  constructor(){ }
+  constructor(private boookService: BookService){ }
 
   ngOnInit(): void {
-    const { data } :any = (dataRaw as any).default
-    this.dataBooks = data;
+    this.boookService.getAllBooks$()
+      .subscribe((response: BooksModel[]) =>{
+        console.log(response)
+        this.dataBooks = response
+      })
   }
 
   ngOnDestroy(): void {

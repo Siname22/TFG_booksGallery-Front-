@@ -9,7 +9,7 @@ import { BooksModel } from '@core/models/books.model';
 })
 export class CardBooksComponent implements OnInit{
 
-  @Input() books:BooksModel = {_id:0, nameBook:'',saga:'',portrait:'',editorial:'',sinopsis:''};
+  @Input() books:BooksModel = {id:0, nombre:'',saga:'',portada:'',editorial:'',sinopsis:'', favoritos:false};
   constructor(){ }
 
   ngOnInit(): void {

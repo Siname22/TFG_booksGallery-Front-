@@ -14,28 +14,16 @@ export class BookService {
   constructor(private http: HttpClient) {
 
   }
-
   /**
    * 
-   * @returns Devolver todas los libros
-   */
-
-  private skipById(listTracks: BooksModel[], id: number): Promise<BooksModel[]> {
-    return new Promise((resolve, reject) => {
-      const listTmp = listTracks.filter(a => a._id !== id)
-      resolve(listTmp)
-    })
-  }
-
-  /**
-   * TODO {data:[..1,...2,..2]}
    * 
-   * @returns 
+   * @returns todos los libros del usuario
    */
   getAllBooks$(): Observable<any> {
-    return this.http.get(`${this.URL}/tracks`)
+    console.log(this.URL)
+    return this.http.get(`${this.URL}/books_gallery/1`)
       .pipe(
-        map(({ data }: any) => {
+        map((data : any) => {
           return data
         })
       )

@@ -1,11 +1,12 @@
 import { AutorModel } from "./autor.model";
 
 export interface BooksModel {
-    nameBook: string;
+    id: string | number;
+    nombre: string;
+    portada: string;
     saga: string;
-    editorial: string;
-    sinopsis: string,
-    portrait: string;
-    _id: string | number;
+    editorial: string,
+    sinopsis: string;
+    favoritos: boolean;
     autor?: AutorModel;
 }
