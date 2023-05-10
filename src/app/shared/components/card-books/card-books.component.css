@@ -1,6 +1,9 @@
 .card-player {
     background-color: var(--color-2);
     height: 5rem;
+    border-width: 1px;
+    border-style: solid;
+    border-color: whitesmoke;
     border-radius: var(--border-radius-1);
     display: flex;
     cursor: pointer;
@@ -11,6 +14,7 @@
 .card-player:hover {
     background-color: #4d4d4d;
 }
+
 
 .card-player .cover {
     width: 5rem;
@@ -27,8 +31,33 @@
     align-content: center;
     padding: 0 0 0 .75rem;
 }
-
-
+/*-------------------------------------------------------------------------*/
+.card-player.card-player.player-big .heart{
+    position: absolute;
+    right: 75%;
+    top: 6%
+}
+.card-player .heart{
+    opacity: 0;
+    width: 5rem;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    transition: all ease var(--animation-1);
+}
+.card-player:hover .heart {
+    opacity: 1;
+}
+.card-player .heart {
+    color: var(--color-4);
+    border: 0;
+    font-size: 1.50rem;
+    border-radius: 2rem;
+    width: 24px;
+    height: 24px;
+    margin-left: 1px;
+}
 
 /* ------------------------------------------------------------------------ */
 .card-player.player-big .info-button-player {
@@ -56,9 +85,13 @@
     font-size: 1.50rem;
     border-radius: 2rem;
     background-color: var(--color-1);
-    width: 35px;
+    width: 36px;
     height: 35px;
     margin-left: 1px;
+}
+.card-player .info-button-player .info-btn .uil{
+    font-style: none;
+    color: white;
 }
 /* ------------------------------------------------------------------------ */
 .card-player.player-big .edit-button-player {
@@ -80,13 +113,14 @@
     opacity: 1;
 }
 
+
 .card-player .edit-button-player .edit-btn {
     color: var(--color-4);
     border: 0;
     font-size: 1.50rem;
     border-radius: 2rem;
     background-color: blue;
-    width: 35px;
+    width: 36px;
     height: 35px;
     margin-left: 1px;
 }
@@ -117,10 +151,11 @@
     font-size: 1.50rem;
     border-radius: 2rem;
     background-color:red;
-    width: 35px;
+    width: 36px;
     height: 35px;
     margin-left: 1px;
     margin-top: 1%;
+    cursor: pointer;
 }
 /* ------------------------------------------------------------------------ */
 .card-player.player-big {

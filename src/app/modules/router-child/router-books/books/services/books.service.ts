@@ -20,13 +20,23 @@ export class BookService {
    * @returns todos los libros del usuario
    */
   getAllBooks$(): Observable<any> {
-    console.log(this.URL)
+    console.log('UserBooks = ',`${this.URL}/books_gallery/1`)
     return this.http.get(`${this.URL}/books_gallery/1`)
       .pipe(
         map((data : any) => {
           return data
         })
       )
+  }
+
+  deleteBook_Id$(idBook: any): Observable<any> {
+    console.log('Deletebook = ',`${this.URL}/delete_book_gallery/${idBook}/1`)
+    return this.http.delete(`${this.URL}/delete_book_gallery/${idBook}/1`)
+    .pipe(
+      map((data: any) => {
+        return data
+      })
+    )
   }
 
 }

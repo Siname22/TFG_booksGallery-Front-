@@ -1,3 +1,7 @@
+a{
+    color:white;
+    text-decoration: none;
+}
 .side-bar {
     min-width: 12rem;
     width: 12%;
@@ -51,6 +55,9 @@
 
 .side-bar__separator.line-separator {
     border-bottom: solid 1px white;
+}
+.side-bar__separator.line-separator-list {
+    border-bottom: dashed  1px white;
 }
 
 .side-bar__list.list-three .list-wrapper-item {

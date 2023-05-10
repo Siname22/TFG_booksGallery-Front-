@@ -8,7 +8,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 export class SearchComponent implements OnInit{
   @Output() callbackData: EventEmitter<any> = new EventEmitter()
 
-  src: string = 'Jay Kristoff'
+  src: string = ''
 
   constructor(){
 
@@ -19,9 +19,12 @@ export class SearchComponent implements OnInit{
   }
 
   callSearch(term: string): void{
-    if(term.length >= 3){
+    if(term.length >= 2){
       this.callbackData.emit(term)
-      console.log('🔴 Llamamos a nuestra API HTTP GET---> ', term);
+    }else{
+      //Me devuelve un 404 para poder borrar la busqueda del linbro
+      term.length == 0
+      this.callbackData.emit(term)
     }
   }
 }

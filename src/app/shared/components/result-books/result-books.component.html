@@ -2,7 +2,8 @@
     <ul class="play-list-table-header">
         <li (click)="changeSort('nombre')">Nombre</li>
         <li (click)="changeSort('saga')">Saga </li>
-        <li> Autor</li>
+        <li> Editorial</li>
+        <li> Autor </li>
         
     </ul>
     <ul class="play-list-rows" *ngFor="let book of books |orderList:optionSort.property:optionSort.order">
@@ -11,6 +12,9 @@
         </li>
         <li class="book-name-opacity">
             {{book.saga}}
+        </li>
+        <li class="book-name-opacity">
+            {{book.editorial}}
         </li>
         <li class="book-name-opacity">
             {{book.autor?.nombre}}
@@ -25,7 +29,6 @@
         <img appImgBroken class="cover-book" [src]="book.portada" [alt]="book.nombre">
         <div class="cover-info">
             <div class="name-book">{{book.nombre}}</div>
-            <div class="name-book-details">{{book.autor.nombre}}</div>
         </div>
     </div>
 

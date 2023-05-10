@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable, of } from 'rxjs';
+import { SearchService } from '@modules/router-child/explore/services/search.service';
 
 @Component({
   selector: 'app-explore-page',
@@ -6,13 +8,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./explore-page.component.css']
 })
 export class ExplorePageComponent implements OnInit{
-  constructor(){ }
+  listResults$: Observable<any> = of([])
+  constructor(private searchService: SearchService){ }
 
   ngOnInit(): void {
     
   }
 
   receiveData(event: string): void{
-    console.log('Estoy en el padre', event);
+    
+    this.listResults$ = this.searchService.searchBooks$(event)
+    
   }
 }

@@ -1,6 +1,18 @@
 <div class="login-auth-page">
+    <div class="logo">
+        <h1>
+            Your
+            <em class="planet left">B</em>
+            <em >O</em>
+            <em>O</em>
+            <em>K</em>
+            <em class="planet right">S</em>
+            Gallery
+        </h1>
+    </div>
+    
     <div class="login-auth-wrapper">
-        <h3>Para continuar, inicia sesión en tu Galeria de Libros.</h3>
+        <h3>Para continuar, inicia sesión</h3>
         <form [formGroup]="formLogin" class="login-auth-form">
             <div class="form-group">
                 <label for="email">Dirección de correo o nombre de usuario</label>
@@ -16,9 +28,11 @@
             <div *ngIf="errorSession">
                 Ocurrio un error con tu email o password
             </div>
-            <div class="form-action">
-                <button [disabled]="formLogin.invalid" class="login social-btn">Iniciar sesión</button>
-            </div>
+            <button class="button"[disabled]="formLogin.invalid" [routerLink]="'/books_gallery'">
+                <p>Iniciar sesión</p>
+                <div class="button__horizontal"></div>
+                <div class="button__vertical"></div>
+            </button>
         </form>
     </div>
 </div>

@@ -1,5 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { BooksModel } from '@core/models/books.model';
+import { CardBooksComponent } from '../card-books/card-books.component';
 
 
 @Component({
@@ -9,12 +10,15 @@ import { BooksModel } from '@core/models/books.model';
 })
 export class SectionGenericComponent implements OnInit{
   
-  @Input() title:string = 'Tu Galeria de  Libros'
+  @Input() title:string ='';
   @Input() dataBooks:Array<BooksModel> = []
+  @Input() public esLista: boolean = false
   constructor(){
 
   }
 
   ngOnInit(): void {
+  
   }
+
 }

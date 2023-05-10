@@ -6,26 +6,60 @@
     </div>
     <div id="showItems">
         <ul class="side-bar__list list-one">
-        <li [routerLink]="item.router" [queryParams]="item.query" *ngFor="let item of mainMenu.defaultOptions">
-            <div class="list-wrapper-item">
-                <i [ngClass]="['uil',item.icon]"></i>
-                <span class="side-bar__list list-label">{{item.name}}</span>
-            </div>
+        <li  *ngFor="let item of mainMenu.defaultOptions">
+            <a [routerLink]="item.router" [queryParams]="item.query">
+                <div class="list-wrapper-item">
+                    <i [ngClass]="['uil',item.icon]"></i>
+                    <span class="side-bar__list list-label">{{item.name}}</span>
+                </div>
+            </a>
         </li>
     </ul>
 
     <div class="side-bar__separator line-separator"></div>
-    
     <div class="side-bar__separator"></div>
+    
     <ul class="side-bar__list list-two">
-        <li [routerLink]="item.router" [queryParams]="item.query"  *ngFor="let item of mainMenu.accessLink">
-            <div class="list-wrapper-item">
+        <li *ngFor="let item of mainMenu.accessLink">
+            <a [routerLink]="item.router" [queryParams]="item.query">
+                <div class="list-wrapper-item">
                 <i [ngClass]="['uil',item.icon]"></i>
                 <span class="side-bar__list list-label">{{item.name}}</span>
-            </div>
+                </div>
+            </a>   
         </li>
     </ul>
-   
+
+    <div *ngIf="dataList.length != 0">
+        <div class="side-bar__separator line-separator-list"></div>
+        <div class="side-bar__separator"></div>
+        <ul class="side-bar__list list-two">
+            <li *ngFor="let item of mainMenu.accessListLink">
+            <a [routerLink]="item.router" [queryParams]="item.query">
+                <div class="list-wrapper-item">
+                <i [ngClass]="['uil',item.icon]"></i>
+                <span class="side-bar__list list-label">{{item.name}}</span>
+                </div>
+            </a>   
+        </li>
+    </ul>
     </div>
+    
+
+    
+
+    <div class="side-bar__separator line-separator"></div>
+    <div class="side-bar__separator"></div>
+
+    <ul class="side-bar__list list-two">
+        <li *ngFor="let item of mainMenu.exitLink">
+            <a [routerLink]="item.router" [queryParams]="item.query">
+                <div class="list-wrapper-item">
+                <i [ngClass]="['uil',item.icon]"></i>
+                <span class="side-bar__list list-label">{{item?.name}}</span>
+                </div>
+            </a>   
+        </li>
+    </ul>
     
 </div>

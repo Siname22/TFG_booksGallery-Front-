@@ -3,40 +3,22 @@
     width: 100vw;
     height: 100vh;
     display: flex;
-    justify-content: center;
     flex-direction: column;
     align-items: center;
     align-content: center;
 }
 
 .login-auth-page .login-auth-wrapper {
-    width: 35%;
+    width: 40%;
     display: flex;
+    margin-top: 5%;
     justify-content: center;
     flex-direction: column;
     align-items: center;
 }
 
-.login-auth-page .login-social-zone {
-    display: flex;
-    flex-direction: column;
-    gap: .75rem;
-    width: 100%;
-}
 
-.login-auth-page .social-btn {
-    border: 0;
-    padding: .5rem 2rem;
-    width: 100%;
-    font-size: var(--font-size-2);
-    border-radius: var(--border-radius-2);
-    box-shadow: var(--shadow-1);
-    border: solid 1px var(--color-4);
-    background-color: var(--color-4);
-    font-weight: 600;
-}
-
-
+/* Formulario ---------------------------------------------------------------------------------*/
 .login-auth-page .login-auth-form {
     display: flex;
     width: 100%;
@@ -56,6 +38,7 @@
     height: 30px;
     padding: .25rem .5rem;
     font-size: 90%;
+    color: white;
 }
 
 .login-auth-page .login-auth-form label {
@@ -66,11 +49,11 @@
 }
 
 .login-auth-page .login-auth-form .form-steps {
-    padding: .5rem 0;
+    padding: 1rem 0;
 }
 
 .login-auth-page .login-auth-form .form-steps .link {
-    color: var(--color-2);
+    color: #35ff00;
     font-size: 85%;
     font-weight: 500;
     text-decoration: underline;
@@ -80,12 +63,167 @@
     color: var(--color-1);
 }
 
-.login-auth-page .login-auth-form .form-action .login {
-    color: var(--color-4);
-    margin: 1rem 0;
-    background-color: var(--color-1);
-}
-
 input.ng-invalid.ng-touched {
     border: solid 2px red !important
-} 
+}
+
+input{
+    background-color: rgba(149, 150, 147, 0.507);
+    margin: 1%;
+}
+input::placeholder{
+    color: white;
+    text-align: justify;
+    font-style: italic;
+}
+
+/* Button -----------------------------------------------------------------------------------*/
+.login-auth-page .login-auth-form .button {
+    --offset: 10px;
+    --border-size: 2px;
+    position: relative;
+    padding: .5em;
+    top: 5%;
+    border: 0;
+    background: transparent;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: .5px;
+    box-shadow: inset 0 0 0 var(--border-size) currentcolor;
+    transition: background 0.8s ease;
+    align-items: center;
+    
+    font-size: large;
+}
+.login-auth-page .login-auth-form .button:hover{
+    background-color: rgba(245, 245, 245, 0.712);
+    color: rgb(0, 0, 0);
+}
+.button__horizontal, .button__vertical {
+    position: absolute;
+    top: var(--horizontal-offset, 0);
+    right: var(--vertical-offset, 0);
+    bottom: var(--horizontal-offset, 0);
+    left: var(--vertical-offset, 0);
+    transition: transform 0.8s ease;
+    will-change: transform;
+    border-radius: 1px;
+}
+.button__horizontal::before, .button__vertical::before {
+    content: "";
+    position: absolute;
+    border: inherit;
+}
+.button__horizontal {
+    --vertical-offset: calc(var(--offset) * -1);
+    border-top: var(--border-size) solid currentcolor;
+    border-bottom: var(--border-size) solid currentcolor;
+}
+.button__horizontal::before {
+    top: calc(var(--vertical-offset) - var(--border-size));
+    bottom: calc(var(--vertical-offset) - var(--border-size));
+    left: calc(var(--vertical-offset) * -1);
+    right: calc(var(--vertical-offset) * -1);
+}
+.button:hover .button__horizontal {
+    transform: scaleX(0);
+}
+.button__vertical {
+    --horizontal-offset: calc(var(--offset) * -1);
+    border-left: var(--border-size) solid currentcolor;
+    border-right: var(--border-size) solid currentcolor;
+}
+.button__vertical::before {
+    top: calc(var(--horizontal-offset) * -1);
+    bottom: calc(var(--horizontal-offset) * -1);
+    left: calc(var(--horizontal-offset) - var(--border-size));
+    right: calc(var(--horizontal-offset) - var(--border-size));
+    
+}
+.button:hover .button__vertical {
+    transform: scaleY(0);
+}
+
+
+
+
+
+
+/* Logo ---------------------------------------------------------------------------------------*/
+h1 {
+    margin-top: 15%;
+    height: 12vmin;
+    width: 120vmin;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    font-family:sans-serif;
+    text-transform: uppercase;
+  }
+  
+  h1::before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: -1;
+    top: -10vmin;
+    left: 45vmin;
+    width: 24vmin;
+    height: 24vmin;
+    border-radius: 50%;
+    border: 0.5vmin inset grey;
+    box-sizing: content-box;
+  }
+  
+  em {
+    color: currentColor;
+    font-size: 5vmin;
+    position: relative;
+    font-style: normal;
+    width: 6vmin;
+    text-align: center;
+    bottom:12%;
+  }
+  
+  em.planet {
+    -webkit-animation: planet-rotate 15s linear infinite;
+    animation: planet-rotate 15s cubic-bezier(0.22, 0.61, 0.36, 1) infinite;
+    position: relative;
+  }
+  
+  em.planet::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 5vmin;
+    height: 5vmin;
+    border-radius: 50%;
+    background: transparent;
+  }
+  
+  em.planet.left {
+    -webkit-transform-origin: 15vmin 5.5vmin;
+    transform-origin: 15vmin 5vmin;
+  }
+  
+  em.planet.right {
+    -webkit-transform-origin: 8.5vmin 5vmin;
+    transform-origin: -8.5vmin 5vmin;
+  }
+
+
+@-webkit-keyframes planet-rotate {
+    to {
+        -webkit-transform: rotate(1turn);
+    }
+}
+
+@keyframes planet-rotate {
+    to {
+        transform: rotate(1turn);
+    }
+}
+

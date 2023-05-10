@@ -1,20 +1,29 @@
-<div class="detail--book" *ngFor="let book of bookShow">
+<div class="detail-book" *ngFor="let i of dataBook">
     <div class="header">
-        <div class="cover">
-        <img [src]="book.portada" alt="" >
-    </div>
-    <div content-header>
-        <h1 class="title">{{book.nombre}}</h1>
-        <h3 class="sub-title">{{book.saga}}</h3>
-        <div class="autor">
-            <div class="name-autor">
-                {{book.autor?.nombre}}
+        <div class="portada">
+            <img [src]="i.portada">
+        </div>
+        <div class="detalles-libro">
+            <div class="txt">
+                <h1>{{i.nombre}}</h1>
+                <h2>{{i.saga}}</h2>
+                <h4>{{i.editorial}}</h4>
             </div>
-        </div> 
+        </div>
+        <div class="autor">
+            <h2 class="autor-libro">Autor: {{i.autor?.nombre}}</h2>
+            <br>
+            <div class="autor-foto">
+                <img [src]="i.autor?.foto">
+            </div> 
+        </div>
+        <div class="sinopsis">
+            <h2>Sinopsis:</h2>
+            <p>
+                {{i.sinopsis}}
+            </p>
+        </div>
     </div>
-    <div class="detail--book--body">
-            <div>{{book.sinopsis}}</div>
-    </div>   
 </div>
 
  

@@ -1,13 +1,21 @@
 <div class="card-player player-big">
+    
     <img [src]="books.portada" alt="" class="cover">
 
     <div class="content-player">
         <div class="title-books">{{books.nombre}}</div>
+
         <div class="sub-title-books">{{books.saga}}</div>    
     </div>
+    <div class="heart">
+        <i *ngIf="books.favoritos == false" class="uil" [ngClass]="{'uil-heart-break': true}"></i>
+        <i *ngIf="books.favoritos == true" class="uil" [ngClass]="{'uil-heart': true}"></i>
+    </div>
     <div class="info-button-player">
-        <button *ngIf="true" class="info-btn">
-            <i class="uil" [ngClass]="{'uil-info-circle':true}"></i>
+        <button  *ngIf="true" class="info-btn">
+            <a class="uil" [routerLink]="['/detail_book/',books.id]">
+                <i  [ngClass]="{'uil-info-circle':true}"></i>
+            </a>
         </button>
     </div>
     <div class="edit-button-player">
@@ -16,10 +24,18 @@
         </button>
     </div>
 
-    <div class="delete-button-player">
-        <button *ngIf="true" class="delete-btn">
+    <div *ngIf ="esLista == false"class="delete-button-player">
+        <button *ngIf="true" class="delete-btn" (click)="deleteBookId(books.id)">
             <i class="uil" [ngClass]="{'uil-trash-alt': true}"></i>
         </button>
     </div>
+
+    <div *ngIf ="esLista == true" class="delete-button-player">
+        <button *ngIf="true" class="delete-btn" (click)="deleteBookListId(books.id)">
+            <i class="uil" [ngClass]="{'uil-minus': true}"></i>
+        </button>
+    </div>
+
+    
         
 </div>

@@ -1,4 +1,4 @@
 <div class="explore-page">
     <app-search (callbackData)="receiveData($event)"></app-search>
-    <app-result-books></app-result-books>
+    <app-result-books [books]="listResults$ | async"></app-result-books>
 </div>

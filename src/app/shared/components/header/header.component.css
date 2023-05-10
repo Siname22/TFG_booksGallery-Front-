@@ -1,0 +1,88 @@
+.header{
+    position: relative;
+    width: 84%;
+    left: 15%;
+    border-bottom: 1px solid grey;
+}
+/* Logo------------------------------------------------------------------------------ */
+.logo{
+  position: relative;
+  left: 45%;
+}
+.nickname{
+  position: absolute;
+  width: 50%;
+  top:5%;
+}
+h1 {
+  height: 2rem;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
+  font-family: sans-serif;
+  text-transform: uppercase;
+}
+  
+  h1::before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: -1;
+    top: -35%;
+    left: 47.5%;
+    width: 4.5%;
+    height: 167%;
+    border-radius: 50%;
+    border: 0.5vmin inset grey;
+    box-sizing: content-box;
+  }
+  
+  em {
+    color: currentColor;
+    font-size: 50%;
+    position: relative;
+    font-style: normal;
+    width: 2%;
+    text-align: center;
+}
+  
+  em.planet {
+    -webkit-animation: planet-rotate  infinite;
+    animation: planet-rotate 4s cubic-bezier(0.22, 0.61, 0.36, 1) infinite;
+    position: relative;
+  }
+  
+  em.planet::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 5vmin;
+    height: 5vmin;
+    border-radius: 50%;
+    background: transparent;
+  }
+  
+  em.planet.left {
+    -webkit-transform-origin: 45px 10px;
+    transform-origin: 45px 10px;
+  }
+  
+  em.planet.right {
+    -webkit-transform-origin: 10px 10px;
+    transform-origin: -10px 10px;
+  }
+
+
+@-webkit-keyframes planet-rotate {
+    to {
+        -webkit-transform: rotate(1turn);
+    }
+}
+
+@keyframes planet-rotate {
+    to {
+        transform: rotate(1turn);
+    }
+}

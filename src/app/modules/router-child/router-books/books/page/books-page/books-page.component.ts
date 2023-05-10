@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { BooksModel } from '@core/models/books.model';
 import { BookService } from '@modules/router-child/router-books/books/services/books.service';
-import { Subscription } from 'rxjs';
+import { Subscription, Observable, of } from 'rxjs';
 
 
 @Component({
@@ -12,19 +12,30 @@ import { Subscription } from 'rxjs';
 export class BooksPageComponent implements OnInit, OnDestroy {
   dataBooks:Array<BooksModel> = []
   listObervers$ : Array<Subscription> = []
+  listResult$: Observable<BooksModel[]> = of([])
 
-  constructor(private boookService: BookService){ }
+  constructor(private bookService: BookService){ }
 
   ngOnInit(): void {
-    this.boookService.getAllBooks$()
+    this.bookService.getAllBooks$()
       .subscribe((response: BooksModel[]) =>{
-        console.log(response)
+        console.log('Todos los libros del user: ', response)
         this.dataBooks = response
       })
+    this.receiveData
   }
 
   ngOnDestroy(): void {
+  }
 
+  receiveData(event: any): void{
+    this.bookService.deleteBook_Id$(event)
+    .subscribe((response: BooksModel[]) =>{
+      console.log(response)
+      this.dataBooks = response
+      console.log('datos que sigue teniendo el user = ', this.dataBooks)
+      window.location.reload()
+    })  
   }
 
 }

@@ -8,6 +8,8 @@ import { OrderListPipe } from './pipe/order-list.pipe';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { DetailBookComponent } from './components/detail-book/detail-book.component';
+import { HeaderComponent } from './components/header/header.component';
+
 
 @NgModule({
   declarations: [
@@ -17,6 +19,7 @@ import { DetailBookComponent } from './components/detail-book/detail-book.compon
     ResultBooksComponent,
     OrderListPipe,
     DetailBookComponent,
+    HeaderComponent,
     ],
   imports: [
     CommonModule,
@@ -29,6 +32,7 @@ import { DetailBookComponent } from './components/detail-book/detail-book.compon
     ResultBooksComponent,
     OrderListPipe,
     DetailBookComponent,
+    HeaderComponent,
   ]
 })
 export class SharedModule { }

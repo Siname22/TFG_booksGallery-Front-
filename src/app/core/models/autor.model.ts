@@ -1,5 +1,5 @@
 export interface AutorModel {
-    id: number;
+    id: number | string;
     nombre: string;
     foto: string
 }

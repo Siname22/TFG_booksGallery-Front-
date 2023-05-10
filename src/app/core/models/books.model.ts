@@ -8,5 +8,5 @@ export interface BooksModel {
     editorial: string,
     sinopsis: string;
     favoritos: boolean;
-    autor?: AutorModel;
+    autor?:AutorModel
 }

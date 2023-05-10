@@ -3,7 +3,7 @@
 }
 
 .play-list-table-header {
-    width: 90%;
+    width: 100%;
     list-style: none;
     display: grid;
     grid-template-columns: 3fr 2fr 2fr 1fr;

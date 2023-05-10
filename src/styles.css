@@ -35,6 +35,7 @@ body {
 .underlay-photo {
     animation: hue-rotate 6s infinite;
     background: url("assets/images/fondo.jpg");
+    background-color: #000000;
     background-size: cover;
     -webkit-filter: grayscale(30%);
     filter: grayscale(30%);
