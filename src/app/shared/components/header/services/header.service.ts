@@ -13,8 +13,8 @@ export class HeaderService {
   constructor(private http:HttpClient, private cookie: CookieService) { }
 
  getUser$():Observable<any> {
-  console.log('User =' , `${this.URL}/user`, this.addHeader())
-  return this.http.get(`${this.URL}/user`, this.addHeader())
+  console.log('User =' , `${this.URL}/user/`, this.addHeader())
+  return this.http.get(`${this.URL}/user/`, this.addHeader())
   .pipe(
     map((data:any) =>{
       console.log(data)
@@ -24,16 +24,11 @@ export class HeaderService {
  }
 
  addHeader() {
-  const token = this.cookie.get('token');
-  console.log('token:', token)
-  console.log('esto es el header: ', {
-    headers: new HttpHeaders({
-      Authorization: `Bearer ${token}`
-    })
-  })
+  const token = this.cookie.get('token')
+  console.log(token)
   return{
     headers: new HttpHeaders({
-      Authorization: `Bearer ${token}`
+      Authorization: `${token}`
     })
   };
 }

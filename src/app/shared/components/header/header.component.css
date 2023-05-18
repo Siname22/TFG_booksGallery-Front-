@@ -12,9 +12,11 @@
 .nickname{
   position: absolute;
   width: 50%;
-  top:5%;
+  bottom: -5%;
+  font-style: italic;
+  text-transform: unset;
 }
-h1 {
+.logo h1 {
   height: 2rem;
   width: 100%;
   display: flex;
@@ -25,7 +27,7 @@ h1 {
   text-transform: uppercase;
 }
   
-  h1::before {
+.logo  h1::before {
     content: "";
     display: block;
     position: absolute;
@@ -39,7 +41,7 @@ h1 {
     box-sizing: content-box;
   }
   
-  em {
+.logo  em {
     color: currentColor;
     font-size: 50%;
     position: relative;

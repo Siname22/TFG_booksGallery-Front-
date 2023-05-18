@@ -8,14 +8,17 @@ import { UsersModel } from '@core/models/users.model';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit{
+  dataUser: Array<UsersModel> = []
+
   constructor(private headerService: HeaderService){
 
   }
 
   ngOnInit(): void {
-    /* this.headerService.getUser$()
+    this.headerService.getUser$()
     .subscribe((response: UsersModel[])=>{
       console.log(response)
-    }) */
+      this.dataUser = response
+    })
   }
 }

@@ -21,7 +21,6 @@ export class ListsService {
 
   addHeader() {
     const token = this.cookie.get('token');
-    console.log('token del header ', token)
     return{
       headers: new HttpHeaders({
         Authorization: `${token}`

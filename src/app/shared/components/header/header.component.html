@@ -8,7 +8,7 @@
             <em>G</em>
         </h1>
     </div>
-    <div class="nickname">
-        Nickname
+    <div class="nickname" *ngFor="let i of dataUser">
+        <h1>Bienvenido : {{i.nickname}}</h1>
     </div>
 </div>
