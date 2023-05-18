@@ -13,10 +13,10 @@
     
     <div class="login-auth-wrapper">
         <h3>Para continuar, inicia sesión</h3>
-        <form [formGroup]="formLogin" class="login-auth-form">
+        <form (ngSubmit)="sendLogin()" [formGroup]="formLogin" class="login-auth-form">
             <div class="form-group">
-                <label for="email">Dirección de correo o nombre de usuario</label>
-                <input formControlName="email" type="text" placeholder="Dirección de correo o nombre de usuario" class="form-input">
+                <label for="username">Dirección de correo electronico</label>
+                <input formControlName="username" type="text" placeholder="Dirección de correo o nombre de usuario" class="form-input">
             </div>
             <div class="form-group">
                 <label for="password">Contraseña</label>
@@ -28,7 +28,7 @@
             <div *ngIf="errorSession">
                 Ocurrio un error con tu email o password
             </div>
-            <button class="button"[disabled]="formLogin.invalid" [routerLink]="'/books_gallery'">
+            <button class="button"[disabled]="formLogin.invalid">
                 <p>Iniciar sesión</p>
                 <div class="button__horizontal"></div>
                 <div class="button__vertical"></div>

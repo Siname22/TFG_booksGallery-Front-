@@ -66,6 +66,10 @@
               "browserTarget": "booksGallery:build:development"
             }
           },
+          "options": {
+            "browserTarget": "booksGallery:build",
+            "proxyConfig": "src/proxy.conf.json"
+          },
           "defaultConfiguration": "development"
         },
         "extract-i18n": {

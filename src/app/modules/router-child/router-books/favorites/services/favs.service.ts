@@ -1,5 +1,6 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { CookieService } from 'ngx-cookie-service';
 import { Observable, map } from 'rxjs';
 import { environment } from 'src/enviroments/environment';
 
@@ -9,7 +10,7 @@ import { environment } from 'src/enviroments/environment';
 export class FavsService {
   private readonly URL = environment.api
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private cookie: CookieService) { }
 
   /**
    * 
@@ -18,12 +19,21 @@ export class FavsService {
    */
 
   getFavsBooks$(): Observable<any> {
-    console.log('FavsBooks =' , `${this.URL}/favorites/1`)
-    return this.http.get(`${this.URL}/favorites/1`)
+    console.log('FavsBooks =' , `${this.URL}/favorites/`, this.addHeader())
+    return this.http.get(`${this.URL}/favorites/`, this.addHeader())
     .pipe(
       map((data: any)=>{
         return data
       })
     )
+  }
+
+  addHeader() {
+    const token = this.cookie.get('token');
+    return{
+      headers: new HttpHeaders({
+        authorization: `${token}`
+      })
+    };
   }
 }
