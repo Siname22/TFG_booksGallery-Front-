@@ -1,8 +1,11 @@
 .header{
-    position: relative;
-    width: 84%;
-    left: 15%;
-    border-bottom: 1px solid grey;
+  font-family: "Cinzel";
+  color: white;
+  position: relative;
+  width: 84%;
+  top:3%;
+  left: 15%;
+  border-bottom: 1px solid grey;
 }
 /* Logo------------------------------------------------------------------------------ */
 .logo{
@@ -15,6 +18,7 @@
   bottom: -5%;
   font-style: italic;
   text-transform: unset;
+  
 }
 .logo h1 {
   height: 2rem;
@@ -32,7 +36,7 @@
     display: block;
     position: absolute;
     z-index: -1;
-    top: -35%;
+    top: -50%;
     left: 47.5%;
     width: 4.5%;
     height: 167%;
@@ -43,7 +47,7 @@
   
 .logo  em {
     color: currentColor;
-    font-size: 50%;
+    font-size: 70%;
     position: relative;
     font-style: normal;
     width: 2%;
@@ -67,8 +71,8 @@
   }
   
   em.planet.left {
-    -webkit-transform-origin: 45px 10px;
-    transform-origin: 45px 10px;
+    -webkit-transform-origin: 46px 16px;
+    transform-origin: 45px 16px;
   }
   
   em.planet.right {

@@ -7,6 +7,7 @@
     border-style: solid;
     border-color: white;
     border-radius: 70px 20px;
+    font-family: "Cinzel";
 }
 
 .header .portada {
@@ -31,7 +32,7 @@
     width: 72%;
     border-radius: 20px;
     right: -7%;
-    top: 7%;
+    top: 11%;
 }
 .header .detalles-libro .txt{
     margin-left: 15%;
@@ -40,15 +41,17 @@
 }
 
 .txt h1{
+    font-family: "Cinzel";
     font-size: 3rem;
 }
 .txt h2{
+    font-family: "Cinzel";
     font-size: 1.5rem;
 }
 .header .autor {
     display: block;
     margin-left: 78%;
-    margin-top: -32%;
+    margin-top: -30%;
     padding: 1%;
     width: 20%;
     height: 34%;
@@ -56,6 +59,7 @@
 }
 
 .header .autor .autor-libro{
+    font-family: "Cinzel";
     margin: 0%;
     width: 100%;
 }
@@ -76,9 +80,9 @@
 }
 
 .header .sinopsis{
-    margin-top: 10%;
+    margin-top: 11%;
     margin-left: 2%;
-    width: 92%;
+    width: 95%;
     font-size: 1.25rem;
     text-align: justify;
     display: inline-block;

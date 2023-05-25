@@ -10,9 +10,15 @@ a{
     top: 0;
     left: 0;
     padding: .5rem 1rem;
+    font-family: "Cinzel";
     animation: hue-rotate 6s infinite;
     background: rgb(23, 23, 26);
     background: linear-gradient(90deg, rgba(171, 123, 33, 0.5) 30%, rgb(23, 23, 26, 1) 100%);
+}
+
+.side-bar i{
+    color: white;
+    margin-bottom: 3%;
 }
 
 @keyframes hue-rotate {
@@ -24,13 +30,17 @@ a{
     }
 }
 
+
 .side-bar__list {
     list-style: none;
-    padding: 0;
     margin: 0;
     opacity: .8;
 }
 
+.side-bar  ul{
+    margin-top: 4%;
+    padding: 0%;
+}
 .side-bar__list .list-label {
     font-size: 100%;
     font-weight: 500;
@@ -40,7 +50,6 @@ a{
     font-size: var(--font-size-1);
     font-weight: 500;
     display: flex;
-    align-items: center;
     align-content: center;
 }
 

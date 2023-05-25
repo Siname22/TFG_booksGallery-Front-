@@ -1,4 +1,4 @@
-.login-auth-page {
+.add-list-page {
     position: absolute;
     width: 100vw;
     height: 100vh;
@@ -6,66 +6,57 @@
     flex-direction: column;
     align-items: center;
     align-content: center;
-    color: white;
     font-family: "Cinzel";
+
 }
 
-.login-auth-page .login-auth-wrapper {
-    width: 40%;
+.add-list-page .list-wrapper {
+    width: 50%;
     display: flex;
     margin-top: 5%;
+    margin-right: 20%;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    font-size: large;
 }
 
+h3{
+    font-family: "Cinzel";
+    font-size: xx-large;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
 
 /* Formulario ---------------------------------------------------------------------------------*/
-.login-auth-page .login-auth-form {
+.add-list-page .list-form {
     display: flex;
     width: 100%;
     justify-content: flex-start;
     flex-direction: column;
-    
 }
 
-.login-auth-page .login-auth-form .form-group {
+.add-list-page .list-form .form-group {
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
 }
 
-.login-auth-page .login-auth-form .form-group input {
+.add-list-page .list-form .form-group input {
     border: solid 1px #e7e7e7;
     border-radius: var(--border-radius-1);
     height: 30px;
     padding: .25rem .5rem;
-    font-size: 90%;
     color: white;
 }
 
-.login-auth-page .login-auth-form label {
+.add-list-page .list-form label {
     padding-bottom: .35rem;
     font-weight: 600;
     display: inline-block;
     margin: 0;
 }
 
-.login-auth-page .login-auth-form .form-steps {
-    padding: 1rem 0;
-}
 
-.login-auth-page .login-auth-form .form-steps .link {
-    color: #35ff00;
-    font-size: 85%;
-    font-weight: 500;
-    text-decoration: underline;
-}
-
-.login-auth-page .login-auth-form .form-steps .link:hover {
-    color: var(--color-1);
-}
 
 input.ng-invalid.ng-touched {
     border: solid 2px red !important
@@ -82,12 +73,12 @@ input::placeholder{
 }
 
 /* Button -----------------------------------------------------------------------------------*/
-.login-auth-page .login-auth-form .button {
+.add-list-page .list-form .button {
     --offset: 10px;
     --border-size: 2px;
     position: relative;
     padding: .5em;
-    top: 5%;
+    top: 10%;
     border: 0;
     background: transparent;
     color: #ffffff;
@@ -99,12 +90,12 @@ input::placeholder{
     box-shadow: inset 0 0 0 var(--border-size) currentcolor;
     transition: background 0.8s ease;
     align-items: center;
+    
     font-size: large;
 }
-.login-auth-page .login-auth-form .button p{
+.add-list-page .list-form .button p{
     margin-top: 12px;
 }
-
 .login-auth-page .login-auth-form .button:hover{
     background-color: rgba(245, 245, 245, 0.712);
     color: rgb(0, 0, 0);
@@ -152,85 +143,5 @@ input::placeholder{
 }
 .button:hover .button__vertical {
     transform: scaleY(0);
-}
-
-
-
-
-
-
-/* Logo ---------------------------------------------------------------------------------------*/
-h1 {
-    margin-top: 15%;
-    height: 12vmin;
-    width: 120vmin;
-    display: flex;
-    justify-content: center;
-    position: relative;
-    font-family:sans-serif;
-    text-transform: uppercase;
-  }
-  
-  h1::before {
-    content: "";
-    display: block;
-    position: absolute;
-    z-index: -1;
-    top: -12vmin;
-    left: 45vmin;
-    width: 24vmin;
-    height: 24vmin;
-    border-radius: 50%;
-    border: 0.5vmin inset grey;
-    box-sizing: content-box;
-  }
-  
-  em {
-    color: currentColor;
-    font-size: 5vmin;
-    position: relative;
-    font-style: normal;
-    width: 6vmin;
-    text-align: center;
-    bottom:12%;
-  }
-  
-  em.planet {
-    -webkit-animation: planet-rotate 15s linear infinite;
-    animation: planet-rotate 15s cubic-bezier(0.22, 0.61, 0.36, 1) infinite;
-    position: relative;
-  }
-  
-  em.planet::before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    width: 5vmin;
-    height: 5vmin;
-    border-radius: 50%;
-    background: transparent;
-  }
-  
-  em.planet.left {
-    -webkit-transform-origin: 15vmin 3vmin;
-    transform-origin: 15vmin 3vmin;
-  }
-  
-  em.planet.right {
-    -webkit-transform-origin: 9.5vmin 3vmin;
-    transform-origin: -9.5vmin 3vmin;
-  }
-
-
-@-webkit-keyframes planet-rotate {
-    to {
-        -webkit-transform: rotate(1turn);
-    }
-}
-
-@keyframes planet-rotate {
-    to {
-        transform: rotate(1turn);
-    }
 }
 

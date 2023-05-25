@@ -6,9 +6,9 @@ import { CardBooksComponent } from './components/card-books/card-books.component
 import { ResultBooksComponent } from './components/result-books/result-books.component';
 import { OrderListPipe } from './pipe/order-list.pipe';
 import { RouterModule } from '@angular/router';
-import { FormsModule } from '@angular/forms';
 import { DetailBookComponent } from './components/detail-book/detail-book.component';
 import { HeaderComponent } from './components/header/header.component';
+
 
 
 @NgModule({

@@ -1,5 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { ListModel } from '@core/models/list.model';
 import { CookieService } from 'ngx-cookie-service';
 import { Observable, map, tap } from 'rxjs';
 import { environment } from 'src/enviroments/environment';
@@ -34,16 +35,9 @@ export class ListService {
     )
   }
 
-  addList(name:string): Observable<any> {
-    const body = {
-      name
-    }
-    return this.http.post(`${this.URL}/addList/`, body, this.addHeader())
-    .pipe(
-      tap((responseOk: any) =>{
-        console.log('Estoy aqui', responseOk)
-      })
-    )
+  addList$(name:string): Observable<any> {
+    console.log('AddListUser: ', `${this.URL}/addList/`,{name}, this.addHeader())
+    return this.http.post(`${this.URL}/addList/`, {name}, this.addHeader())
   }
 
 

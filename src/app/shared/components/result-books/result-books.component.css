@@ -1,5 +1,5 @@
 .play-list-body {
-    padding: 1rem 2rem;
+    padding: 1rem 
 }
 
 .play-list-table-header {
@@ -11,7 +11,7 @@
     padding: 0;
     font-size: 90%;
     letter-spacing: 1px;
-    border-bottom: solid 1px var(--color-2);
+    border-bottom: solid 1px whitesmoke;
     padding-bottom: .5rem;
 }
 
@@ -28,6 +28,7 @@
     grid-template-columns: 3fr 2fr 2fr 1fr;
     margin: 0;
     padding: 1rem 0 0 0;
+    align-items: center;
 }
 
 .play-list-rows .book-name-opacity {
@@ -37,12 +38,12 @@
 
 .cover-section {
     display: flex;
-    padding: 0
+    padding: 0;
+    align-items: center;
 }
 
 .cover-section .cover-book {
-    width: 40px;
-    height: 40px;
+    width: 20%;
     object-fit: cover;
 }
 
@@ -51,6 +52,6 @@
 }
 
 .cover-section .cover-info .name-book-details {
-    font-size: 80%;
+    font-size: 90%;
     opacity: .7;
 }

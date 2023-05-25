@@ -1,0 +1,16 @@
+<div class="add-book-page">
+    <div class="book-wrapper">
+        <h3>Añade un libro a tu galeria </h3>
+        <form (ngSubmit)="sendList()" [formGroup]="formBook" class="book-form">
+            <div class="form-group">
+                <label for="name">Nombre del libro:</label>
+                <input formControlName="name" type="text" placeholder="Lista 1" class="form-input">
+            </div>
+            <button class="button"[disabled]="formBook.invalid">
+                <p>Crear Lista</p>
+                <div class="button__horizontal"></div>
+                <div class="button__vertical"></div>
+            </button>
+        </form>
+    </div>
+</div>

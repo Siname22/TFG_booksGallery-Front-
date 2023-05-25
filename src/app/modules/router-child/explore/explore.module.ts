@@ -19,6 +19,9 @@ import { FormsModule } from '@angular/forms';
     ExploreRoutingModule,
     SharedModule,
     FormsModule
+  ],
+  exports: [
+    SearchComponent
   ]
 })
 export class ExploreModule { }

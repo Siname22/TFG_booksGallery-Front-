@@ -28,12 +28,11 @@ const routes: Routes = [
   /* rutas para configuraciones de las galerias */
   {
     path:'add_book_to_gallery',
-    loadChildren:() => import('@modules/router-child/add-book/add-book.module').then(m => m.AddBookModule)
+    loadChildren:() => import('@modules/router-child/router-books/add-book/add-book.module').then(m => m.AddBookModule)
   },
-
   {
-    path:'addListBook',
-    loadChildren:() => import('@modules/router-child/add-list-book/add-list-book.module').then(m => m.AddListBookModule)
+    path:'addListUser',
+    loadChildren:() => import('@modules/router-child/router-lists/add-list-user/add-list-user.module').then(m => m.AddListUserModule)
   },
   
   

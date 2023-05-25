@@ -1,6 +1,13 @@
 .section--generic {
-    margin-bottom: 2rem;
+  margin-bottom: 2rem;
+  font-family: "Cinzel";
 }
+
+
+.section--generic .section--generic__title{
+  font-family: "Cinzel";
+}
+
 
 .section--generic__player--zone .player--list {
     display: flex;
@@ -10,8 +17,7 @@
     gap: 1.15rem;
 }
 .section--generic__player--zone .player--list a{
-    text-decoration: none;
-    color: white;
+  text-decoration: none; 
 }
 
 .section--generic__player--zone .player--list.card-small {

@@ -22,7 +22,7 @@ export class SearchComponent implements OnInit{
     if(term.length >= 2){
       this.callbackData.emit(term)
     }else{
-      //Me devuelve un 404 para poder borrar la busqueda del linbro
+      //Me devuelve un 404 para poder borrar la busqueda del libro
       term.length == 0
       this.callbackData.emit(term)
     }

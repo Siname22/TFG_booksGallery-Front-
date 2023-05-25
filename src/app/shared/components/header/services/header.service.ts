@@ -17,7 +17,6 @@ export class HeaderService {
   return this.http.get(`${this.URL}/user/`, this.addHeader())
   .pipe(
     map((data:any) =>{
-      console.log(data)
       return data
     })
   )
@@ -25,7 +24,6 @@ export class HeaderService {
 
  addHeader() {
   const token = this.cookie.get('token')
-  console.log(token)
   return{
     headers: new HttpHeaders({
       Authorization: `${token}`

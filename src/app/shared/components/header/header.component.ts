@@ -17,7 +17,6 @@ export class HeaderComponent implements OnInit{
   ngOnInit(): void {
     this.headerService.getUser$()
     .subscribe((response: UsersModel[])=>{
-      console.log(response)
       this.dataUser = response
     })
   }

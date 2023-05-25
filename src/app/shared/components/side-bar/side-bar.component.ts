@@ -43,7 +43,7 @@ export class SideBarComponent implements OnInit {
       {
         name: 'Crear lista',
         icon: 'uil-plus-square',
-        router:['/','addListBook']
+        router:['/','addListUser']
       },
       {
         name: 'Eliminar Lista',

@@ -1,7 +1,9 @@
 <div class="search-component">
+    
     <div *ngIf="src.length == 0"> 
-        <p>Escribe algo para poder buscar aqui abajo</p>
-    </div> <input (ngModelChange)="callSearch($event)" [(ngModel)]="src" type="text" placeholder="Autores, Libros o Sagas">
-    <div *ngIf="src.length != 0"> <p>Libros encontrador por: {{src}} </p></div>
+        <h2>Escribe algo para poder buscar:</h2>
+    </div> 
+    <input (ngModelChange)="callSearch($event)" [(ngModel)]="src" type="text" placeholder="Autores, Libros o Sagas">
+    <div *ngIf="src.length != 0"> <h4>Libros encontrador por: {{src}} </h4></div>
     
 </div>

@@ -1,0 +1,16 @@
+<div class="add-list-page">
+    <div class="list-wrapper">
+        <h3>Crear una lista </h3>
+        <form (ngSubmit)="sendList()" [formGroup]="formList" class="list-form">
+            <div class="form-group">
+                <label for="name">Nombre de la lista</label>
+                <input formControlName="name" type="text" placeholder="Lista 1" class="form-input">
+            </div>
+            <button class="button"[disabled]="formList.invalid">
+                <p>Crear Lista</p>
+                <div class="button__horizontal"></div>
+                <div class="button__vertical"></div>
+            </button>
+        </form>
+    </div>
+</div>
