@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { BooksModel } from '@core/models/books.model';
+import { SearchService } from '@modules/router-child/explore/services/search.service';
 
 
 @Component({
@@ -11,7 +12,7 @@ export class ResultBooksComponent implements OnInit{
   @Input() books: BooksModel[] = []
   
   optionSort:{ property: string | null, order: string } = { property: null, order: 'asc' }
-  constructor(){ }
+  constructor(private searchService: SearchService){ }
 
   ngOnInit(): void {
   }
@@ -25,4 +26,15 @@ export class ResultBooksComponent implements OnInit{
     console.log(this.optionSort);
 
   }
+
+  addBook(nameBook:string){
+    const name  = nameBook;
+    this.searchService.addBook$(name)
+    .subscribe((response: any) =>{
+      console.log(response)
+      window.alert('Has añadido a tu galeria el libro: ' + name)
+      window.location.reload()
+    })
+  }
 }
+  

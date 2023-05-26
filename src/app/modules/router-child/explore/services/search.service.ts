@@ -1,8 +1,9 @@
 import { environment } from './../../../../../enviroments/environment';
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { CookieService } from 'ngx-cookie-service';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +11,7 @@ import { map } from 'rxjs/operators';
 export class SearchService {
   private readonly URL = environment.api
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient,  private cookie: CookieService) { }
 
   searchBooks$(term: string): Observable<any> {
     console.log('🔴 Llamamos a nuestra API HTTP GET:', `${this.URL}/books/${term}`);
@@ -21,6 +22,19 @@ export class SearchService {
           return dataRaw
         })
       )
-      
+  }
+
+  addBook$(name:string): Observable<any> {
+    console.log('AddListUser: ', `${this.URL}/addBookToGallery/`,{name}, this.addHeader())
+    return this.http.post(`${this.URL}/addBookToGallery/`, {name}, this.addHeader())
+  }
+
+  addHeader() {
+    const token = this.cookie.get('token');
+    return{
+      headers: new HttpHeaders({
+        authorization: `${token}`
+      })
+    };
   }
 }

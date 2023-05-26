@@ -97,8 +97,6 @@ export class SideBarComponent implements OnInit {
           router: ['/','list_user', list.id, list.nombre]
         }) 
     }
-
-    
   }
   
 }

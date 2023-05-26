@@ -37,13 +37,14 @@ export class ListPageComponent implements OnInit, OnDestroy{
   }
 
   receiveData(event: any): void{
-    this.books_listService.deleteListBook_Id$(event, this.listId)
-    .subscribe((response: BooksModel[]) =>{
-      console.log('Libro que borro de la lista', response)
-      this.data_list = response
-      console.log('datos que sigue teniendo el user = ', this.data_list)
-      window.location.reload()
-      
-    })  
+    if(window.confirm('¿Seguro que quieres elimar el libro?') == true){
+      this.books_listService.deleteListBook_Id$(event, this.listId)
+      .subscribe((response: BooksModel[]) =>{
+        console.log('Libro que borro de la lista', response)
+        this.data_list = response
+        console.log('datos que sigue teniendo el user = ', this.data_list)
+        window.location.reload()
+      })
+    }  
   }
 }

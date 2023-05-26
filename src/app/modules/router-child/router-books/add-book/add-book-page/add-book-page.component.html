@@ -1,13 +1,36 @@
 <div class="add-book-page">
     <div class="book-wrapper">
         <h3>Añade un libro a tu galeria </h3>
-        <form (ngSubmit)="sendList()" [formGroup]="formBook" class="book-form">
+        <form (ngSubmit)="sendBook()" [formGroup]="formBook" class="book-form">
             <div class="form-group">
-                <label for="name">Nombre del libro:</label>
-                <input formControlName="name" type="text" placeholder="Lista 1" class="form-input">
+                <div class="titleBook">
+                    <label for="name">Nombre del libro:</label>
+                    <input formControlName="name" type="text" placeholder="Tormenta" class="form-input">
+                </div>
+                <div class="autor">
+                    <label for="autor">Nombre del autor:</label>
+                    <input formControlName="autor" type="text" placeholder="Jay Kristoff" class="form-input">
+                </div>
+                <div class="saga">
+                    <label for="saga">Saga:</label>
+                    <input formControlName="saga" type="text" placeholder="La guerra del Loto I" class="form-input">
+                </div>
+                <div class="editorial">
+                    <label for="editorial">Nombre de la editorial:</label>
+                    <input formControlName="editorial" type="text" placeholder="Nocturne" class="form-input">
+                </div>
+                <div class="sinopsis">
+                    <label for="sinopsis">Sinopsis:</label>
+                    <input formControlName="sinopsis" type="tex" placeholder="Este libro trata de ...." class="form-input">
+                </div>
+                <div class="portada">
+                    <label for="portada">Portada:</label>
+                    <input formControlName="portada" type="text" placeholder="URL" class="form-input">
+                </div>
+
             </div>
             <button class="button"[disabled]="formBook.invalid">
-                <p>Crear Lista</p>
+                <p>Añadir Libro</p>
                 <div class="button__horizontal"></div>
                 <div class="button__vertical"></div>
             </button>

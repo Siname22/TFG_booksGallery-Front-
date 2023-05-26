@@ -29,13 +29,15 @@ export class BooksPageComponent implements OnInit, OnDestroy {
   }
 
   receiveData(event: any): void{
-    this.bookService.deleteBook_Id$(event)
-    .subscribe((response: BooksModel[]) =>{
-      console.log(response)
-      this.dataBooks = response
-      console.log('datos que sigue teniendo el user = ', this.dataBooks)
-      window.location.reload()
-    })  
+    if(window.confirm('¿Seguro que quieres elimar el libro?') == true){
+      this.bookService.deleteBook_Id$(event)
+      .subscribe((response: BooksModel[]) =>{
+        console.log(response)
+        this.dataBooks = response
+        console.log('datos que sigue teniendo el user = ', this.dataBooks)
+        window.location.reload()
+      })
+    } 
   }
 
 }

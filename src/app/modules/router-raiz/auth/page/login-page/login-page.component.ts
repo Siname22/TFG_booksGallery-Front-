@@ -39,7 +39,7 @@ export class LoginPageComponent implements OnInit{
       responseOk => { //TODO: Cuando el usuario credenciales Correctas ✔✔
         console.log('Session iniciada correcta', responseOk.token);
         const tokenSession = responseOk.token;
-        this.cookie.set('token', tokenSession, 1, '/') //TODO:📌📌📌📌
+        this.cookie.set('token', tokenSession, 4, '/') //TODO:📌📌📌📌
         this.router.navigate(['/', 'books_gallery'])
       //TODO: 200 <400
       },

@@ -4,7 +4,7 @@
         <li (click)="changeSort('saga')">Saga </li>
         <li> Editorial</li>
         <li> Autor </li>
-        
+        <li></li>
     </ul>
     <ul class="play-list-rows" *ngFor="let book of books |orderList:optionSort.property:optionSort.order">
         <li class="book-name">
@@ -18,6 +18,9 @@
         </li>
         <li class="book-name-opacity">
             {{book.autor?.nombre}}
+        </li>
+        <li class="book-name-opacity">
+            <button class="uil uil-book-medical" (click)="addBook(book.nombre)"> Añadir a tu Biblioteca</button>
         </li>
     </ul>
 </div>
