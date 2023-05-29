@@ -45,11 +45,6 @@ export class SideBarComponent implements OnInit {
         icon: 'uil-plus-square',
         router:['/','addListUser']
       },
-      {
-        name: 'Eliminar Lista',
-        icon: 'uil uil-minus-square-full',
-        router:['/', 'deleteListBook']
-      }
     ],
     accessListLink: [
 
