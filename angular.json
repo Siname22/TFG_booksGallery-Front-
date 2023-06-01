@@ -60,10 +60,6 @@
               "namedChunks": true,
               "fileReplacements": [
                 {
-                  "replace": "/app/TFG_bookGalleryFront/src/enviroments.ts",
-                  "with": "/app/TFG_bookGalleryFront/src/enviroments.development.ts"
-                },
-                {
                   "replace": "src/environments/environment.ts",
                   "with": "src/environments/environment.development.ts"
                 }
