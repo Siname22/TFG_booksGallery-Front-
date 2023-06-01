@@ -3,7 +3,6 @@ import { Observable, Subscription, of } from 'rxjs';
 import { ActivatedRoute } from '@angular/router';
 import { DetailService } from '@modules/router-child/router-books/detail-book/services/detail.service';
 import { BooksModel } from '@core/models/books.model';
-import { BookService } from '../../books/services/books.service';
 
 
 @Component({

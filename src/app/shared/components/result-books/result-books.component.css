@@ -58,4 +58,12 @@
 .uil {
     font-size: var(--font-size-2);
     padding-right: .5rem;
+    
+}
+
+.play-list-rows .book-name-opacity button{
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 8px;
+    color: white;
 }

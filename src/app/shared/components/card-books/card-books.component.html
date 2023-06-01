@@ -8,8 +8,8 @@
         <div class="sub-title-books">{{books.saga}}</div>    
     </div>
     <div class="heart">
-        <i *ngIf="books.favoritos == false" class="uil" [ngClass]="{'uil-heart-break': true}"></i>
-        <i *ngIf="books.favoritos == true" class="uil" [ngClass]="{'uil-heart': true}"></i>
+        <i *ngIf="books.favoritos == false" class="uil" [ngClass]="{'uil-heart-break': true}" (click)="changeFavorite(books.id)"></i>
+        <i *ngIf="books.favoritos == true" class="uil" [ngClass]="{'uil-heart': true}" (click)="changeFavorite(books.id)"></i>
     </div>
     <div class="info-button-player">
         <button  *ngIf="true" class="info-btn">
@@ -18,11 +18,11 @@
             </a>
         </button>
     </div>
-    <div class="edit-button-player">
+<!--     <div class="edit-button-player">
         <button *ngIf="true" class="edit-btn">
             <i class="uil" [ngClass]="{'uil-pen': true}"></i>
         </button>
-    </div>
+    </div> -->
 
     <div *ngIf ="esLista == false"class="delete-button-player">
         <button *ngIf="true" class="delete-btn" (click)="deleteBookId(books.id)">

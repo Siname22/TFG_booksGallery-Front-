@@ -40,6 +40,11 @@ export class ListService {
     return this.http.post(`${this.URL}/addList/`, {name}, this.addHeader())
   }
 
+  deleteList$(idlist:any){
+    console.log('Deletebook = ',`${this.URL}/delete_list/${idlist}/`, this.addHeader())
+    return this.http.delete(`${this.URL}/delete_list/${idlist}/`,this.addHeader())
+  }
+
 
   addHeader() {
     const token = this.cookie.get('token');

@@ -24,6 +24,10 @@ export class CardBooksComponent implements OnInit{
     this.bookComponent.receiveData(idBook)
   }
 
+  public changeFavorite(idBook:any): void{
+    this.bookComponent.changeFavorite(idBook)
+  }
+
   public deleteBookListId(idBook: any): void{
     this.listComponent.receiveData(idBook)
   }

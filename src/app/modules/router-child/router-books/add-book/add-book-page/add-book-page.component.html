@@ -4,31 +4,22 @@
         <form (ngSubmit)="sendBook()" [formGroup]="formBook" class="book-form">
             <div class="form-group">
                 <div class="titleBook">
-                    <label for="name">Nombre del libro:</label>
-                    <input formControlName="name" type="text" placeholder="Tormenta" class="form-input">
+                    <input formControlName="name" type="text" placeholder="Nombre del libro" class="form-input">
                 </div>
                 <div class="autor">
-                    <label for="autor">Nombre del autor:</label>
-                    <input formControlName="autor" type="text" placeholder="Jay Kristoff" class="form-input">
+                    <input formControlName="autor" type="text" placeholder="Nombre del autor" class="form-input">
                 </div>
                 <div class="saga">
-                    <label for="saga">Saga:</label>
-                    <input formControlName="saga" type="text" placeholder="La guerra del Loto I" class="form-input">
+                    <input formControlName="saga" type="text" placeholder="Nombre de la saga" class="form-input">
                 </div>
                 <div class="editorial">
-                    <label for="editorial">Nombre de la editorial:</label>
-                    <input formControlName="editorial" type="text" placeholder="Nocturne" class="form-input">
+                    <input formControlName="editorial" type="text" placeholder="Nombre de la editorial" class="form-input">
                 </div>
                 <div class="sinopsis">
-                    <label for="sinopsis">Sinopsis:</label>
-                    <input formControlName="sinopsis" type="tex" placeholder="Este libro trata de ...." class="form-input">
+                    <textarea formControlName="sinopsis" size = 3 placeholder="Sinopsis" class="form-input"></textarea>
                 </div>
                 <div class="portada">
-                    <label for="portada">Portada:</label>
-                    <input formControlName="portada" type="text" placeholder="URL" class="form-input">
-                </div>
-                <div class="lista">
-                    
+                    <input formControlName="portada" type="textarea" placeholder="URL de la portada" class="form-input">
                 </div>
 
             </div>

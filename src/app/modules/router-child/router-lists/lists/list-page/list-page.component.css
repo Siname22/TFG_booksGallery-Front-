@@ -1,3 +1,30 @@
 .list-page{
     padding: 2.5rem;
 }
+
+.list-page .uil-trash{
+    position: absolute;
+    right: 5%;
+    top: 85%;
+    background-color: red;
+    font-size: 30px;
+    padding: 0.5rem 0.5rem;
+    color: white;
+    border-radius: 50%;
+    border-color: white;
+    height: 8%;
+    width: 4%;;
+}
+.list-page .uil-book-medical{
+    position: absolute;
+    right: 5%;
+    top: 75%;
+    background-color: rgb(88, 139, 12);
+    font-size: 30px;
+    padding: 0.5rem 0.5rem;
+    color: white;
+    border-radius: 50%;
+    border-color: white;
+    height: 8%;
+    width: 4%;;
+}

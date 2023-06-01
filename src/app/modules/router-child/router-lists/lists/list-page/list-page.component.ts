@@ -2,11 +2,14 @@ import { Component, Input, OnDestroy, OnInit, Output } from '@angular/core';
 import { BooksModel } from '@core/models/books.model';
 import { ListService } from '../services/list.service';
 import { ActivatedRoute, ParamMap } from '@angular/router';
+import { MatDialog} from '@angular/material/dialog';
+import { PopupAddBookListComponent } from '../popup-add-book-list/popup-add-book-list.component';
+import { SectionComponent } from '../popup-add-book-list/section/section.component';
 
 @Component({
   selector: 'app-list-page',
   templateUrl: './list-page.component.html',
-  styleUrls: ['./list-page.component.css']
+  styleUrls: ['./list-page.component.css'],
 })
 export class ListPageComponent implements OnInit, OnDestroy{
   data_list: Array<BooksModel> =[]
@@ -14,7 +17,7 @@ export class ListPageComponent implements OnInit, OnDestroy{
   listName:any
   infoDef: Array<BooksModel> =[]
 
-  constructor( private books_listService: ListService, private route:ActivatedRoute){}
+  constructor( private books_listService: ListService, private route:ActivatedRoute, private popUpService:MatDialog, private popcomponent:SectionComponent){}
 
   ngOnInit(): void {
     this.route.paramMap.subscribe((params: ParamMap) => {
@@ -46,5 +49,24 @@ export class ListPageComponent implements OnInit, OnDestroy{
         window.location.reload()
       })
     }  
+  }
+
+  addBookToList(): void{
+    this.popUpService.open(PopupAddBookListComponent, {
+      height: 'auto',
+      maxHeight:'70%',
+      width:'70%',
+    })
+    this.popcomponent.sendId(this.listId)
+  }
+
+  deleteList(){
+    if(window.confirm('¿Seguro que quieres elimar la lista?') == true){
+      this.books_listService.deleteList$(this.listId)
+      .subscribe((response:any)=>{
+        console.log('se ha borrado la lista', response)
+        window.location.replace('(/books_gallery')
+      })
+    }   
   }
 }

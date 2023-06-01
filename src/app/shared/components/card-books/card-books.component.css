@@ -129,7 +129,7 @@
 .card-player.player-big .delete-button-player {
     position: absolute;
     right: 0;
-    top: 28%;
+    top:85%;
 }
 .card-player .delete-button-player {
     opacity: 0;

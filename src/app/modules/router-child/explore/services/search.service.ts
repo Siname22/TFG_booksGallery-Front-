@@ -25,7 +25,7 @@ export class SearchService {
   }
 
   addBook$(name:string): Observable<any> {
-    console.log('AddListUser: ', `${this.URL}/addBookToGallery/`,{name}, this.addHeader())
+    console.log('AddBookUser: ', `${this.URL}/addBookToGallery/`,{name}, this.addHeader())
     return this.http.post(`${this.URL}/addBookToGallery/`, {name}, this.addHeader())
   }
 

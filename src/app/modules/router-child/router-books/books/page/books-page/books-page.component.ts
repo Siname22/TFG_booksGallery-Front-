@@ -39,5 +39,13 @@ export class BooksPageComponent implements OnInit, OnDestroy {
       })
     } 
   }
+  changeFavorite(event:any): void{
+    this.bookService.changeFav$(event)
+    .subscribe((response:BooksModel[]) =>{
+      this.dataBooks = response
+      console.log(this.dataBooks)
+      window.location.reload()
+    })
+  }
 
 }

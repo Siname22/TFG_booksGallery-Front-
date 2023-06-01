@@ -1,0 +1,32 @@
+<div class="section--generic">
+    <h1 mat-dialog-title class="section--generic__title">{{title}}</h1>
+<!-- Imagen libro -->
+    <div class="imagen-libro-izda">
+        <div class="section--generic__player--zone">
+            <ul class="player--list" *ngIf="dataBooks.length != 0">
+                <li *ngFor="let books of dataBooks; let i = index">
+                    <!--Para de buggear un objeto: {track | json} -->
+                    <app-card-book [books]='books' (click)="cogerIdlibro(books.id)"></app-card-book>
+                </li>
+            </ul>
+        </div>
+    </div>
+<!-- Texto -->
+    <div class="txt-drcha">
+        <p>Libros que vas a añadir: </p>
+        <div *ngIf="estaLleno == true" >
+            <div *ngFor="let book of librosToAdd" class="titulos">
+                    {{book.nombre}} 
+            </div>
+        </div>
+    </div>
+    <div class="clearbox"></div>
+<!-- Botones -->
+    <div align="end">
+        <button class="button" (click)="addBookList()">
+            <p>Añadir</p>
+            <div class="button__horizontal"></div>
+            <div class="button__vertical"></div>
+        </button>
+    </div>
+</div>

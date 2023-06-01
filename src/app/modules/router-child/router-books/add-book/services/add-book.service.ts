@@ -25,7 +25,7 @@ export class AddBookService {
     }
 
 
-    console.log('AddListUser: ', `${this.URL}/addBook/`,book, this.addHeader())
+    console.log('AddBook: ', `${this.URL}/addBook/`,book, this.addHeader())
     return this.http.post(`${this.URL}/addBook/`, book, this.addHeader())
   }
   

@@ -1,6 +1,5 @@
 import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { BooksModel } from '@core/models/books.model';
-import { CardBooksComponent } from '../card-books/card-books.component';
 
 
 @Component({

@@ -1,9 +1,8 @@
 import { environment } from 'src/enviroments/environment';
-import { BooksModel } from '@core/models/books.model';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { map, mergeMap, tap, catchError } from 'rxjs/operators';
+import { map } from 'rxjs/operators';
 import { CookieService } from 'ngx-cookie-service';
 
 @Injectable({
@@ -40,6 +39,16 @@ export class BookService {
     )
   }
 
+  changeFav$(idBook:any): Observable<any>{
+    console.log('Cambio Fav = ', `${this.URL}/change_favorites/`,{idBook}, this.addHeader())
+    return this.http.post(`${this.URL}/change_favorites/`,{idBook}, this.addHeader())
+    .pipe(
+      map((data: any) => {
+        console.log(data)
+        return data
+      })
+    )
+  }
 
 
 
