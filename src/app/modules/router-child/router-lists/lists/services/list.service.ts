@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { ListModel } from '@core/models/list.model';
 import { CookieService } from 'ngx-cookie-service';
 import { Observable, map, tap } from 'rxjs';
-import { environment } from 'src/enviroments/environment';
+import { environment } from 'src/environments/environment';
 
 
 @Injectable({
