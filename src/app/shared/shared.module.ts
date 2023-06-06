@@ -8,6 +8,7 @@ import { OrderListPipe } from './pipe/order-list.pipe';
 import { RouterModule } from '@angular/router';
 import { DetailBookComponent } from './components/detail-book/detail-book.component';
 import { HeaderComponent } from './components/header/header.component';
+import { ImgBrokenDirective } from './directives/img-broken.directive';
 
 
 
@@ -20,6 +21,7 @@ import { HeaderComponent } from './components/header/header.component';
     OrderListPipe,
     DetailBookComponent,
     HeaderComponent,
+    ImgBrokenDirective,
     ],
   imports: [
     CommonModule,
@@ -33,6 +35,7 @@ import { HeaderComponent } from './components/header/header.component';
     OrderListPipe,
     DetailBookComponent,
     HeaderComponent,
+    ImgBrokenDirective
   ]
 })
 export class SharedModule { }

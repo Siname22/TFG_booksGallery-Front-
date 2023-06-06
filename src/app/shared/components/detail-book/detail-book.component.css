@@ -2,7 +2,7 @@
 .header{
     background: linear-gradient(90deg, rgba(135, 134, 143, 0.199) 0%, rgb(26, 22, 22) 66%);
     padding: 1px;
-    height: 54rem;
+    height: 52.5rem;
     border-width: 1px;
     border-style: solid;
     border-color: white;
@@ -12,7 +12,7 @@
 
 .header .portada {
     position: relative;
-    margin: 1% 2% 0.5% 1%;
+    margin: 2% 2% 1% 2%;
     width: 20%;
     border-radius: 70px 20px 20px 20px;
 }
@@ -35,7 +35,7 @@
     top: 11%;
 }
 .header .detalles-libro .txt{
-    margin-left: 15%;
+    margin-left: 7%;
     text-align: center;
     text-transform: uppercase;
 }

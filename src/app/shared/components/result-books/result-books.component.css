@@ -1,5 +1,6 @@
 .play-list-body {
-    padding: 1rem 
+    padding: 1rem;
+
 }
 
 .play-list-table-header {
@@ -20,8 +21,11 @@
     color: var(--color-4);
     opacity: .7;
 }
-
-.play-list-rows {
+.resultado{
+    overflow-y: auto;
+    height: 45rem;
+}
+.resultado .play-list-rows {
     width: 100%;
     list-style: none;
     display: grid;
@@ -29,9 +33,10 @@
     margin: 0;
     padding: 1rem 0 0 0;
     align-items: center;
+    
 }
 
-.play-list-rows .book-name-opacity {
+.resultado .play-list-rows .book-name-opacity {
     opacity: .7;
     font-weight: 300;
 }

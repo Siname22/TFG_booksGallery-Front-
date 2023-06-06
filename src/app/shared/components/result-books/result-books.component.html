@@ -6,7 +6,8 @@
         <li> Autor </li>
         <li></li>
     </ul>
-    <ul class="play-list-rows" *ngFor="let book of books |orderList:optionSort.property:optionSort.order">
+    <div class="resultado">
+        <ul class="play-list-rows" *ngFor="let book of books |orderList:optionSort.property:optionSort.order">
         <li class="book-name">
             <ng-container *ngTemplateOutlet="coverSection;context:{book:book}"></ng-container>
         </li>
@@ -23,13 +24,15 @@
             <button class="uil uil-book-medical" (click)="addBook(book.nombre)"> Añadir a tu Biblioteca</button>
         </li>
     </ul>
+    </div>
+    
 </div>
 
 <!--template del cover-->
 <ng-template #coverSection let-book="book">
 
     <div class="cover-section">
-        <img appImgBroken class="cover-book" [src]="book.portada" [alt]="book.nombre">
+        <img appImgBroken [customImg]="'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/2048px-Angular_full_color_logo.svg.png'"class="cover-book" [src]="book.portada" [alt]="book.nombre">
         <div class="cover-info">
             <div class="name-book">{{book.nombre}}</div>
         </div>
