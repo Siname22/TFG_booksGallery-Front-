@@ -34,7 +34,7 @@
 /*-------------------------------------------------------------------------*/
 .card-player.card-player.player-big .heart{
     position: absolute;
-    right: 75%;
+    right: 80%;
     top: 6%
 }
 .card-player .heart{
@@ -57,6 +57,8 @@
     width: 24px;
     height: 24px;
     margin-left: 1px;
+    background-color: darkred;
+    padding: 15px;
 }
 
 /* ------------------------------------------------------------------------ */
@@ -161,8 +163,8 @@
 .card-player.player-big {
     position: relative;
     flex-direction: column;
-    width: auto;
-    height: 24rem;
+    width: 15.5rem;
+    height: 24.5rem;
     padding: 1rem;
 }
 
@@ -178,9 +180,19 @@
     align-self: flex-start;
     align-items: flex-start;
 }
+.card-player.player-big .content-player .title-books{
+    width: 210px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
 
 .card-player.player-big .content-player .sub-title-books {
     font-size: 90%;
     opacity: .7;
+    width: 140px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 

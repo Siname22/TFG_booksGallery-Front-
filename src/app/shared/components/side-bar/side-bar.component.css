@@ -77,6 +77,35 @@ a{
     cursor: pointer;
 }
 
+.side-bar__list.list-two .limit-list .side-bar__list.list-label{
+    width: 50%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+} 
+.side-bar__list.list-two .limit-list{
+    overflow-y: auto;
+    max-height:30rem;
+}
+
+.side-bar__list.list-two .limit-list::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+.side-bar__list.list-two .limit-list::-webkit-scrollbar:vertical {
+    width:10px;
+}
+.side-bar__list.list-two .limit-list::-webkit-scrollbar-button:increment,.contenedor::-webkit-scrollbar-button {
+    display: none;
+} 
+.side-bar__list.list-two .limit-list::-webkit-scrollbar-thumb {
+    background-color: #7b7b7b;
+    border-radius: 20px;
+    border: 2px solid #f1f2f3;
+}
+.side-bar__list.list-two .limit-list::-webkit-scrollbar-track {
+    border-radius: 10px;  
+}
+
 @media screen and (max-width: 800px) {
     .side-bar {
       width: 100%;

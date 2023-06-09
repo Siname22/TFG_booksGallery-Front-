@@ -34,13 +34,15 @@
 .card-player.player-big {
     position: relative;
     flex-direction: column;
-    width: auto;
-    height: auto;
+    width: 12rem;
+    height: 14rem;
+    align-items: center;
     padding: 1rem;
 }
 
 .card-player.player-big .cover {
-    width: 100px;
+    width: 105px;
+    height: 150px;
     border-radius: var(--border-radius-1);
 }
 
@@ -49,10 +51,22 @@
     flex-direction: column;
     align-self: flex-start;
     align-items: flex-start;
+    
 }
+.card-player.player-big .content-player .title-books{
+    width: 140px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
 
 .card-player.player-big .content-player .sub-title-books {
     font-size: 90%;
     opacity: .7;
+    width: 140px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 

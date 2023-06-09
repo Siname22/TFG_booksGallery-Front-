@@ -1,52 +1,69 @@
 .section--generic {
-    margin-bottom: 2rem;
-    font-family: "Cinzel";
-  }
-  .imagen-libro-izda{
-    width: 72%;
-    float: left;
-  }
-  .txt-drcha{
-    float: left;
-    width: 20%;
-    text-align: center;
-  }
-  .txt-drcha .titulos{
-    text-align: left;
-    margin-left: 15%;
-  }
-  
-  .clearbox{
-    clear: both;
-  }
-  .section--generic .section--generic__title{
-    font-family: "Cinzel";
-  }
-  .section--generic__player--zone{
-    overflow-y: auto;
-    max-height: 30rem;
-  }
-  .section--generic__player--zone .player--list {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    gap: 1.15rem;
-    flex-wrap: wrap
-  }
-  .section--generic__player--zone .player--list a{
-    text-decoration: none; 
-  }
-  
-  .section--generic__player--zone .player--list {
-      grid-template-columns: repeat(3, 1fr);
-  }
-  
-  .section--generic__player--zone .player--list.card-big {
-      grid-template-columns: repeat(6, minmax(100px, 1fr));
-  }
-  
-  
+  margin-bottom: 2rem;
+  font-family: "Cinzel";
+}
+.imagen-libro-izda{
+  width: 72%;
+  float: left;
+}
+.txt-drcha{
+  float: left;
+  width: 20%;
+  text-align: center;
+}
+.txt-drcha .titulos{
+  text-align: left;
+  margin-left: 15%;
+}
+
+.clearbox{
+  clear: both;
+}
+.section--generic .section--generic__title{
+  font-family: "Cinzel";
+}
+.section--generic__player--zone{
+  overflow-y: auto;
+  max-height: 30rem;
+}
+.section--generic__player--zone::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+.section--generic__player--zone::-webkit-scrollbar:vertical {
+  width:10px;
+}
+.section--generic__player--zone::-webkit-scrollbar-button:increment,.contenedor::-webkit-scrollbar-button {
+  display: none;
+} 
+.section--generic__player--zone::-webkit-scrollbar-thumb {
+  background-color: #7b7b7b;
+  border-radius: 20px;
+  border: 2px solid #f1f2f3;
+}
+.section--generic__player--zone::-webkit-scrollbar-track {
+  border-radius: 10px;  
+}
+.section--generic__player--zone .player--list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 1.15rem;
+  flex-wrap: wrap
+}
+.section--generic__player--zone .player--list a{
+  text-decoration: none; 
+}
+
+.section--generic__player--zone .player--list {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.section--generic__player--zone .player--list.card-big {
+    grid-template-columns: repeat(6, minmax(100px, 1fr));
+}
+
+
 .button {
   --offset: 10px;
   --border-size: 2px;

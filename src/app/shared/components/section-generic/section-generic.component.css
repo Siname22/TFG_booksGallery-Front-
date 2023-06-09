@@ -8,7 +8,6 @@
   font-family: "Cinzel";
 }
 
-
 .section--generic__player--zone .player--list {
     display: flex;
     list-style: none;
@@ -16,7 +15,37 @@
     padding: 0;
     gap: 1.15rem;
 }
+.section--generic__player--zone{
+  overflow-y: auto;
+  max-height: 52rem;
+}
+.section--generic__player--zone::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+.section--generic__player--zone::-webkit-scrollbar:vertical {
+  width:10px;
+}
+.section--generic__player--zone::-webkit-scrollbar-button:increment,.contenedor::-webkit-scrollbar-button {
+  display: none;
+} 
+.section--generic__player--zone::-webkit-scrollbar-thumb {
+  background-color: #7b7b7b;
+  border-radius: 20px;
+  border: 2px solid #f1f2f3;
+}
+.section--generic__player--zone::-webkit-scrollbar-track {
+  border-radius:10px;
+}
+.section--generic__player--zone .player--list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 1.15rem;
+  flex-wrap: wrap
+}
 .section--generic__player--zone .player--list a{
+  width: 20rem;
   text-decoration: none; 
 }
 

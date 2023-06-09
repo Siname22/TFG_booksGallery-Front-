@@ -25,6 +25,23 @@
     overflow-y: auto;
     height: 45rem;
 }
+.resultado::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+.resultado::-webkit-scrollbar:vertical {
+    width:10px;
+}
+.resultado::-webkit-scrollbar-button:increment,.contenedor::-webkit-scrollbar-button {
+    display: none;
+} 
+.resultado::-webkit-scrollbar-thumb {
+    background-color: #7b7b7b;
+    border-radius: 20px;
+    border: 2px solid #f1f2f3;
+}
+.resultado::-webkit-scrollbar-track {
+    border-radius: 10px;  
+}
 .resultado .play-list-rows {
     width: 100%;
     list-style: none;
